@@ -1,0 +1,13 @@
+.news{
+    margin-top: 40px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+}
+.newsbar{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    width: 20%;
+}

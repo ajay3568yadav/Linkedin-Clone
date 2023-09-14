@@ -1,5 +1,5 @@
 import React from "react"
-import "./Header.css"
+import "../styles/Header.css"
 import SearchIcon from '@mui/icons-material/Search';
 import HeaderOptions from "./HeaderOptions";
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
@@ -7,14 +7,23 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import MessageIcon from '@mui/icons-material/Message';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import { useDispatch } from "react-redux";
+import { auth } from "./firebase";
+import {logout} from "../features/userSlice.js"
+import { Link } from "react-router-dom";
 
 function Header() {
+  const dispatch = useDispatch();
+  const logoutOfApp = () =>{
+    dispatch(logout());
+    auth.signOut();
+  }
   return (
     <div className="header">
 
       <div className="header__left">
 
-        <img src={require('/Users/ajayyadav/Documents/react-app/tesla-clone/src/linkedin.png')} alt="logo"/>
+        <img src={require('/Users/ajayyadav/Documents/react-app/linkedin-clone/src//images/linkedin.png')} alt="logo"/>
 
           <div className="header__search">
 
@@ -32,7 +41,7 @@ function Header() {
           <HeaderOptions Icon= {WorkIcon} title="Jobs" />
           <HeaderOptions Icon= {MessageIcon} title="Messages" />
           <HeaderOptions Icon= {NotificationsIcon} title="Notifications" />
-          <HeaderOptions avatar="/Users/ajayyadav/Documents/react-app/tesla-clone/src/ajay.jpg" title="Me" />
+          <Link to="/about"><HeaderOptions avatar={require('/Users/ajayyadav/Documents/react-app/linkedin-clone/src/images/ajay.jpg')} title="Me"/></Link>
       </div>
 
     </div>

@@ -1,0 +1,14 @@
+h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: gray;
+    font-size: 13px;
+    padding-left: 10px;
+}
+.inputOption{
+align-items: center;
+display: flex;
+justify-content: space-between;
+border-radius: 5px;
+padding: 8px 8px 8px 8px;
+}

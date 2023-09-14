@@ -1,0 +1,28 @@
+hr.solid {
+    border-top: 1px solid #bbb;
+    width: 80%;
+  }
+.sort__panel{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+}
+.sort__panel > p{
+    font-size: 12px;
+    padding-left: 10px;
+}
+.sort__panel > hr{
+    border-radius: 10px;
+    margin: 0px;
+}
+.drop__down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.drop__down > h1{
+    font-size: small;
+    padding-left: 10px;
+    cursor: pointer;
+}
